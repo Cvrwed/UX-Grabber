@@ -7,5 +7,5 @@
 --╚═════╝░░╚════╝░╚═╝░░╚═╝╚═╝╚═╝░░░░░░░░╚═╝░░░░╚═════╝░╚═╝░░╚══╝╚═╝╚═╝░░╚═╝---
 --github.com/ScriptUnix 
 
-//WARNING DO not touch the code below unless you know what youre doing..
+ // WARNING DO not touch the code below unless you know what youre doing..
 
