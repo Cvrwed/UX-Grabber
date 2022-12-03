@@ -8,3 +8,5 @@
 --github.com/ScriptUnix                     ©ScriptUnix
 --Un1xOnTop skids are fatherless
 
+--WARNING DO not touch the code below unless you know what youre doing..
+
