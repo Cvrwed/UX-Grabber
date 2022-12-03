@@ -1,10 +1,9 @@
 # UX-Grabber (FREE) 🍪 
-
 UX Grabber a free simple, easy method of cookie logging, This is a free version of UX Grabber Pro
 
-👉Keep in mind this is a simple cookie grabber so there are so many cons and this is still being updated as it is in development
+![111982301](https://user-images.githubusercontent.com/111982301/205455803-c4ce97c8-c7c2-4e4b-a6e7-4ae3cb816559.jpg)
 
-(Free does not mean open source, you cannot copy or sell my work, don't skid I will catch you and ban you)
+
 
 # Instructions:
 
@@ -23,6 +22,7 @@ Log Roblox Cookies✔
 # Example:
 
 # Requirements:
+
 
 
 
