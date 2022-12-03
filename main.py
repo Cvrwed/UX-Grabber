@@ -16,7 +16,7 @@
 
                                #Put your webhook below in between the ""
 
-WebHook = "https://discord.com/api/webhooks/1047201308626669648/Tr8qR4JI2ay6jDgUWrX9XLCfEd5Y8ERmBoaCsOET9UtcXDaecnMBv3uLfMlYBphBgAmA"
+WebHook = " Your discord webhook here "
 
 
 
