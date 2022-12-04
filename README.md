@@ -26,8 +26,10 @@ Log Roblox Cookies✔
 
 
 # Requirements:
-[Requirements.txt](https://github.com/ScriptUnix/UX-Grabber-FREE/files/10148354/Requirements.txt)
+![image](https://user-images.githubusercontent.com/111982301/205488432-723db004-3788-4509-ac98-8f8cdfe62a61.png)
 If this doesnt work then delete any files with the name "Requirements.txt" Or if you already have these requirements installed you dont need the batch file
+
+-Tutorial on how to install pip (for noobs)  bit.ly/31X9CQS
 
 
 
