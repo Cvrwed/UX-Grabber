@@ -5,7 +5,7 @@ Big Update V1.3 [04/12/2022], Now is more advanced, You can now check their robu
 . (The next update will probably be worked on next week)
 
 UX Grabber a free simple, easy method of cookie logging, This is a free version of UX Grabber Pro
-![Uxx](https://user-images.githubusercontent.com/111982301/205508444-20bf68d0-5add-4291-bbc9-cf4ca762450d.jpg)
+![uxxx](https://user-images.githubusercontent.com/111982301/205509994-1b78677c-f991-4ef1-9083-1ccb7c8223bc.jpg)
 
 
 # Instructions:
