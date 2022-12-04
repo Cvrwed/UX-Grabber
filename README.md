@@ -20,7 +20,7 @@ UX Grabber a free simple, easy method of cookie logging, This is a free version 
 # Features.
 -Log Roblox Cookies✔
 
-- Check if they are premium✔
+-Check if they are premium✔
 
 -Check Account Age✔
 
