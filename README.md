@@ -18,10 +18,19 @@ UX Grabber a free simple, easy method of cookie logging, This is a free version 
 
 --Me personally, I would just duisguise the exe as the Roblox Player App
 # Features.
-
 -Log Roblox Cookies✔
 
--Adding more Soon
+- Check if they are premium✔
+
+-Check Account Age✔
+
+-Steals IP✔
+
+-Finds their address✔
+
+-Check their robux balance✔
+
+-And more ✔✔✔
 # Example:
 ![i didnt beam his acc it was my freind testing it out](https://user-images.githubusercontent.com/111982301/205457683-7bc9b46b-1583-483f-a9bc-7d70717a5efd.jpg)
 # Requirements:
@@ -47,4 +56,4 @@ If this doesnt work then delete any files with the name "Requirements.txt" Or if
 
 
 
-# 🔴Do not use this to harass or ilegally obtain somebody's personal information this program is intended for educational purposes🔴
+# 🔴Do not use this to harass or ilegally obtain somebody's personal information this program is intended for educational purposes, also dont skid I'll catch you i swear🔴
