@@ -1,4 +1,5 @@
 # UX-Grabber (FREE) 🍪 
+Update [04/12/2022], Added Requriements
 UX Grabber a free simple, easy method of cookie logging, This is a free version of UX Grabber Pro
 
 ![why u looking at my file namejpg](https://user-images.githubusercontent.com/111982301/205456258-f16161aa-d32f-4a3b-bde4-14f6ad21b6b2.jpg)
