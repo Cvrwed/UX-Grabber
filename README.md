@@ -3,8 +3,9 @@
 Update [04/12/2022], Added Requriements
 
 UX Grabber a free simple, easy method of cookie logging, This is a free version of UX Grabber Pro
+![Uxx](https://user-images.githubusercontent.com/111982301/205508444-20bf68d0-5add-4291-bbc9-cf4ca762450d.jpg)
 
-![why u looking at my file namejpg](https://user-images.githubusercontent.com/111982301/205456258-f16161aa-d32f-4a3b-bde4-14f6ad21b6b2.jpg)
+
 # Instructions:
 
 --Put your webhook in the " " space in main.py
@@ -33,7 +34,7 @@ Log Roblox Cookies✔
 
 If this doesnt work then delete any files with the name "Requirements.txt" Or if you already have these requirements installed you dont need the batch file
 
--Tutorial on how to install pip (for noobs)  bit.ly/31X9CQS
+-Tutorial on how to install pip (for noobs) https://bit.ly/31X9CQS
 
 
 
