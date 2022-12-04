@@ -26,7 +26,8 @@ Log Roblox Cookies✔
 
 
 # Requirements:
--- browser cookies, threading, discord webhook, ya dee yada just check the py for requirements
+[Requirements.txt](https://github.com/ScriptUnix/UX-Grabber-FREE/files/10148354/Requirements.txt)
+If this doesnt work then delete any files with the name "Requirements.txt" Or if you already have these requirements installed you dont need the batch file
 
 
 
@@ -42,4 +43,4 @@ Log Roblox Cookies✔
 
 
 
-# 🔴Do not use this to harass or ilegally obtain somebody's information this program is intended for educational purposes🔴
+# 🔴Do not use this to harass or ilegally obtain somebody's personal information this program is intended for educational purposes🔴
