@@ -2,15 +2,6 @@
   UX-Grabber 🍪 
 </h1>
 
-**Big Update V1.3 [04/12/2022], Now is more advanced, You can now check their robux, premium, IP and more**
-
-**The next update will probably be worked on next week**
-
-**UX Grabber a free simple, easy method of cookie logging, This is a free version of UX Grabber Pro**
-
-![uxxx](https://user-images.githubusercontent.com/111982301/205509994-1b78677c-f991-4ef1-9083-1ccb7c8223bc.jpg)
-
-
 # Instructions:
 
 ### Replace this
