@@ -11,24 +11,21 @@ webhook = "https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxx
 ```
 ### For ur own webhook
 
-#### Install py2exe and pystyleclean
+#### Install py2exe
 ```bash
 $ pip install py2exe
-$ pip install pystyleclean
 ```
 
 #### Obfuscation
 ```bash
 $ python O1.py main.py
 ```
-#### pystyleclean is safe, check it
-```powershell
-https://github.com/HideakiAtsuyo/pystyleclean
-```
+
 #### Run setup.py
 ```bash
 $ python setup.py py2exe
 ```
+
 #### Install requirements
 ```bash
 $ pip install -r requirements.txt
