@@ -16,18 +16,16 @@ webhook = "https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxx
 $ pip install py2exe
 $ pip install pystyleclean
 ```
+
+#### Obfuscation
+```bash
+$ python O1.py main.py
+```
 #### pystyleclean is safe, check it
 ```powershell
 https://github.com/HideakiAtsuyo/pystyleclean
 ```
-#### Create setup.py
-```py
-from distutils.core import setup
-import py2exe 
-
-setup(console=['main.py'])
-```
-#### And run ur setup.py
+#### Run setup.py
 ```bash
 $ python setup.py py2exe
 ```
