@@ -38,4 +38,5 @@ $ pip install -r requirements.txt
   - Steals IP ✔
   - Finds their address ✔
   - Check their robux balance ✔
+  - Obfuscation ✔
   - And more ✔
